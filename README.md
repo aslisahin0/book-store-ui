@@ -109,9 +109,13 @@ Backend api adresinize göre bu satırı güncelleyebilirsiniz.
 ### 🧩 Backend ile Uyumlu Çalışma
 Bu frontend arayüz, aşağıdaki özellikleri içeren .NET Core tabanlı bir API ile entegre çalışmaktadır:
 
-Kitap ve kategori CRUD işlemleri
-Repository Pattern & DTO kullanımı
-AutoMapper ile veri dönüştürme
-JWT Authorization
-Swagger UI ile API dokümantasyonu
+- Kitap ve kategori CRUD işlemleri
+
+- Repository Pattern & DTO kullanımı
+
+- AutoMapper ile veri dönüştürme
+
+- JWT Authorization
+
+- Swagger UI ile API dokümantasyonu
 
