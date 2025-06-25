@@ -1,59 +1,117 @@
-# BookStoreUi
+# Book Store UI - Angular Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+Bu proje, .NET Core ile geliştirilen bir kitap satış sisteminin Angular tabanlı kullanıcı arayüzüdür. Kitap ve kategori yönetimi gibi temel işlemleri destekler.
 
-## Development server
+Backend proje linki: https://github.com/aslisahin0/BookStoreDemo
 
-To start a local development server, run:
+---
 
+## 🚀 Proje Özellikleri
+
+- 📘 Kitap ekleme, listeleme, güncelleme ve silme işlemleri
+- 🗂️ Kategori ekleme, listeleme ve düzenleme
+- 🎨 Angular Material ile modern kullanıcı arayüzü
+- 🔗 RESTful API ile HTTP servisleri üzerinden veri iletişimi
+
+---
+
+## 🛠️ Kurulum ve Çalıştırma Rehberi
+
+### 1. Gereksinimler
+
+- [Node.js (v18+)](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli):
+
+```bash
+npm install -g @angular/cli
+```
+### 2. Projeyi Klonla veya İndir
+Git ile:
+```bash
+git clone <proje-url>
+cd book-store-ui
+```
+Veya ZIP olarak indirip çıkarın.
+
+### 3. Bağımlılıkları Yükle
+```bash
+npm install
+```
+Bu işlem, package.json içindeki bağımlılıkları indirerek node_modules klasörünü oluşturur.
+
+### 4. Uygulamayı Başlat
 ```bash
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Tarayıcınızdan aşağıdaki adrese gidin:
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+### 📦 Kullanılan Paketler ve Kütüphaneler
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
+@angular/core	      Angular'ın temel modülü
+@angular/forms	    Reactive & template form yönetimi
+@angular/router	    Sayfa yönlendirme işlemleri
+@angular/material   UI bileşenleri (kart, form, buton vs.)
+rxjs	              Reactive veri akışı
+zone.js	            Angular değişim takibi
 ```
+Ek olarak kullanılan bazı Angular Material modülleri:
+MatCardModule, MatFormFieldModule, MatSelectModule, MatInputModule, MatButtonModule
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+### 📁 Proje Klasör Yapısı
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+book-store-ui/
+│
+├── src/
+│   ├── app/
+│   │   ├── pages/
+│   │   │   ├── book/
+│   │   │   │   ├── book-add/         → Kitap ekleme sayfası
+│   │   │   │   ├── book-edit/        → Kitap düzenleme sayfası
+│   │   │   │   ├── book-list/        → Kitap listeleme sayfası
+│   │   │   ├── category/
+│   │   │   │   ├── category-add/     → Kategori ekleme
+│   │   │   │   ├── category-edit/    → Kategori düzenleme
+│   │   │   │   ├── category-list/    → Kategori listeleme
+│   │   ├── services/
+│   │   │   ├── book.service.ts       → Kitap servisleri
+│   │   │   └── category.service.ts   → Kategori servisleri
+│   │   ├── models/
+│   │   │   ├── book-dto.ts
+│   │   │   ├── book-create-dto.ts
+│   │   │   ├── book-update-dto.ts
+│   │   │   ├── category-dto.ts
+│   │   │   ├── category-create-dto.ts
+│   │   │   ├── category-update-dto.ts
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
 
-```bash
-ng test
+---
+
+### 🔌 API Bağlantısı
+API adresi doğrudan servis dosyalarında (book.service.ts, category.service.ts) aşağıdaki gibi tanımlanmıştır:
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+private apiUrl = 'http://localhost:5092/api';
 ```
+Backend api adresinize göre bu satırı güncelleyebilirsiniz.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+### 🧩 Backend ile Uyumlu Çalışma
+Bu frontend arayüz, aşağıdaki özellikleri içeren .NET Core tabanlı bir API ile entegre çalışmaktadır:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Kitap ve kategori CRUD işlemleri
+Repository Pattern & DTO kullanımı
+AutoMapper ile veri dönüştürme
+JWT Authorization
+Swagger UI ile API dokümantasyonu
+
