@@ -53,7 +53,6 @@ http://localhost:4200
 ### 📦 Kullanılan Paketler ve Kütüphaneler
 ```
 @angular/core	      Angular'ın temel modülü
-@angular/forms	    Reactive & template form yönetimi
 @angular/router	    Sayfa yönlendirme işlemleri
 @angular/material   UI bileşenleri (kart, form, buton vs.)
 rxjs	              Reactive veri akışı
@@ -61,39 +60,6 @@ zone.js	            Angular değişim takibi
 ```
 Ek olarak kullanılan bazı Angular Material modülleri:
 MatCardModule, MatFormFieldModule, MatSelectModule, MatInputModule, MatButtonModule
-
----
-
-### 📁 Proje Klasör Yapısı
-
-book-store-ui/
-│
-├── src/
-│   ├── app/
-│   │   ├── pages/
-│   │   │   ├── book/
-│   │   │   │   ├── book-add/         → Kitap ekleme sayfası
-│   │   │   │   ├── book-edit/        → Kitap düzenleme sayfası
-│   │   │   │   ├── book-list/        → Kitap listeleme sayfası
-│   │   │   ├── category/
-│   │   │   │   ├── category-add/     → Kategori ekleme
-│   │   │   │   ├── category-edit/    → Kategori düzenleme
-│   │   │   │   ├── category-list/    → Kategori listeleme
-│   │   ├── services/
-│   │   │   ├── book.service.ts       → Kitap servisleri
-│   │   │   └── category.service.ts   → Kategori servisleri
-│   │   ├── models/
-│   │   │   ├── book-dto.ts
-│   │   │   ├── book-create-dto.ts
-│   │   │   ├── book-update-dto.ts
-│   │   │   ├── category-dto.ts
-│   │   │   ├── category-create-dto.ts
-│   │   │   ├── category-update-dto.ts
-│
-├── angular.json
-├── package.json
-├── tsconfig.json
-└── README.md
 
 ---
 
