@@ -1,0 +1,43 @@
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3f2fd;
+  padding: 16px;
+  color: #0d47a1;
+  font-size: 20px;
+}
+
+.add-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.custom-table {
+  border-collapse: collapse;
+  margin-top: 12px;
+  background-color: #fafafa;
+}
+
+.mat-header-cell {
+  background-color: #bbdefb;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.mat-row:hover {
+  background-color: #e3f2fd;
+}
+
+button.mat-button {
+  font-weight: 500;
+}
+
+button[color="warn"] {
+  color: #d32f2f;
+}
+mat-card {
+  margin: 24px;
+  padding: 16px;
+}
+

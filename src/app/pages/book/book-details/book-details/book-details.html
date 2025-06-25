@@ -1,0 +1,17 @@
+<mat-card class="detail-card" *ngIf="book">
+  <div class="detail-header">
+    {{ book.title }}
+  </div>
+
+  <mat-card-content class="detail-content">
+    <p><strong>Yazar:</strong> {{ book.author }}</p>
+    <p><strong>Fiyat:</strong> {{ book.price | currency:'TL' }}</p>
+    <p><strong>Kategori:</strong> {{ book.categoryName }}</p>
+  </mat-card-content>
+
+  <div class="detail-actions">
+    <button mat-raised-button color="primary" (click)="router.navigate(['/book'])">
+      Listeye Dön
+    </button>
+  </div>
+</mat-card>

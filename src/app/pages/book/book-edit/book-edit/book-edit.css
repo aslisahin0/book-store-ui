@@ -1,0 +1,33 @@
+.form-card {
+  margin: 24px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-title {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 12px 16px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}

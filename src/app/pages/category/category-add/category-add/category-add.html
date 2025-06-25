@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title class="title-row">
+    Yeni Kategori Ekle
+  </mat-card-title>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Kategori Adı</mat-label>
+      <input matInput formControlName="name" required />
+    </mat-form-field>
+
+    <div class="button-wrapper">
+      <button mat-raised-button color="primary" (click)="router.navigate(['/category'])">
+        Listeye Dön
+      </button>
+      <button mat-raised-button color="primary" type="submit">
+        Ekle
+      </button>
+    </div>
+  </form>
+</mat-card>

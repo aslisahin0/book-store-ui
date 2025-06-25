@@ -1,0 +1,36 @@
+<mat-card class="form-card">
+  <mat-card-title class="form-title">Kitap Düzenle</mat-card-title>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="edit-form">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Kitap Adı</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Yazar</mat-label>
+      <input matInput formControlName="author" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Fiyat</mat-label>
+      <input matInput type="number" formControlName="price" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Kategori</mat-label>
+      <mat-select formControlName="categoryId">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button mat-raised-button color="primary" (click)="router.navigate(['/book'])">
+        Listeye Dön
+      </button>
+      <button mat-raised-button color="primary" type="submit">Düzenle</button>
+    </div>
+  </form>
+</mat-card>
