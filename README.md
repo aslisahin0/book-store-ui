@@ -9,7 +9,7 @@ Backend proje linki: https://github.com/aslisahin0/BookStoreDemo
 ## 🚀 Proje Özellikleri
 
 - 📘 Kitap ekleme, listeleme, güncelleme ve silme işlemleri
-- 🗂️ Kategori ekleme, listeleme ve düzenleme
+- 🗂️ Kategori ekleme, listeleme, silme ve düzenleme
 - 🎨 Angular Material ile modern kullanıcı arayüzü
 - 🔗 RESTful API ile HTTP servisleri üzerinden veri iletişimi
 
